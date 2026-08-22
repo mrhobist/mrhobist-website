@@ -193,40 +193,6 @@ p  { margin: 0 0 1em; }
 }
 .goal-ic svg { width: 21px; height: 21px; }
 
-/* ------------------------------- Plan --------------------------------- */
-
-.plan { list-style: none; margin: 0; padding: 0; max-width: 760px; }
-
-.plan li {
-  position: relative;
-  padding: 0 0 30px 42px;
-  border-left: 2px solid var(--border-2);
-  margin-left: 15px;
-}
-.plan li:last-child { border-left-color: transparent; padding-bottom: 0; }
-
-.plan .step {
-  position: absolute; left: -16px; top: 0;
-  display: grid; place-items: center;
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  background: var(--bg-2);
-  border: 1px solid var(--border-2);
-  color: var(--brand-2);
-  font-size: .82rem; font-weight: 700;
-}
-.plan h3 { margin-bottom: .3em; }
-.plan p { color: var(--dim); font-size: .95rem; margin-bottom: 0; }
-
-.plan-state {
-  display: inline-block; margin-left: 10px;
-  padding: 2px 9px; border-radius: 999px;
-  border: 1px solid var(--border-2); background: var(--surface);
-  font-size: .72rem; font-weight: 650; letter-spacing: .02em;
-  color: var(--mute); vertical-align: 2px;
-}
-.plan-state.now { color: var(--brand-2); border-color: rgba(42, 212, 196, .4); }
-
 /* ----------------------------- Uygulamalar ---------------------------- */
 
 .app-list { display: grid; gap: 20px; }
@@ -326,16 +292,6 @@ p  { margin: 0 0 1em; }
 .doc strong { color: var(--text); font-weight: 650; }
 .doc ul, .doc ol { padding-left: 22px; margin: 0 0 1.1em; }
 .doc li { margin-bottom: .5em; }
-
-.callout {
-  padding: 20px 22px; margin: 1.6em 0;
-  background: var(--surface);
-  border: 1px solid var(--border-2);
-  border-left: 3px solid var(--brand);
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-.callout p:last-child { margin-bottom: 0; }
-.callout.warn { border-left-color: #f6b23c; }
 
 .table-wrap { overflow-x: auto; margin: 1.5em 0; }
 table { width: 100%; border-collapse: collapse; font-size: .92rem; min-width: 520px; }
