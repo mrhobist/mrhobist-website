@@ -1,0 +1,374 @@
+/* ==========================================================================
+   MrHobist — tek stylesheet
+   Harici font / CDN / betik yok. Site tek alan adindan, tek istekte acilir.
+   ========================================================================== */
+
+:root {
+  --bg: #0a0d12;
+  --bg-2: #0d1219;
+  --surface: #111823;
+  --border: #1e2836;
+  --border-2: #2b3949;
+
+  --text: #e9eff7;
+  --dim: #a2b2c5;
+  --mute: #71829a;
+
+  --brand: #4f8cff;
+  --brand-2: #2ad4c4;
+  --grad: linear-gradient(135deg, #4f8cff 0%, #2ad4c4 100%);
+
+  --maxw: 1080px;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 18px 44px -22px rgba(0, 0, 0, .9);
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg { max-width: 100%; }
+img { height: auto; display: block; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible { outline: 2px solid var(--brand-2); outline-offset: 3px; border-radius: 6px; }
+
+h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -.02em; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 5.4vw, 3.2rem); font-weight: 800; }
+h2 { font-size: clamp(1.45rem, 3.2vw, 2rem); font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 650; }
+h4 { font-size: 1rem; font-weight: 650; }
+p  { margin: 0 0 1em; }
+
+.container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: 20px; }
+
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--brand); color: #04070c;
+  padding: 10px 16px; border-radius: 0 0 10px 0;
+  font-weight: 700; z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+/* ------------------------------- Baslik -------------------------------- */
+
+.site-header {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(10, 13, 18, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; min-height: 64px;
+}
+
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--text); font-weight: 750; font-size: 1.06rem;
+}
+.brand:hover { text-decoration: none; }
+.brand em { font-style: normal; color: var(--brand-2); }
+.brand-mark { width: 28px; height: 28px; flex: none; }
+
+.nav-links { display: flex; align-items: center; gap: 22px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { color: var(--dim); font-size: .945rem; font-weight: 550; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); text-decoration: none; }
+
+@media (max-width: 420px) {
+  .nav-links { gap: 15px; }
+  .nav-links a { font-size: .88rem; }
+}
+
+/* ------------------------------- Butonlar ------------------------------ */
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 20px; border-radius: 11px;
+  font-weight: 650; font-size: .95rem;
+  border: 1px solid transparent; cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn svg { width: 17px; height: 17px; }
+
+.btn-primary { background: var(--grad); color: #05121c; }
+.btn-ghost { background: var(--surface); border-color: var(--border-2); color: var(--text); }
+.btn-ghost:hover { border-color: var(--brand); }
+
+/* -------------------------------- Hero -------------------------------- */
+
+.hero {
+  padding: clamp(56px, 11vw, 104px) 0 clamp(44px, 8vw, 80px);
+  background:
+    radial-gradient(900px 420px at 12% -12%, rgba(79, 140, 255, .15), transparent 62%),
+    radial-gradient(760px 380px at 88% 0%, rgba(42, 212, 196, .11), transparent 60%);
+}
+
+.hero h1 { max-width: 22ch; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; margin-bottom: 22px;
+  border: 1px solid var(--border-2); border-radius: 999px;
+  background: var(--surface);
+  font-size: .84rem; color: var(--dim);
+}
+.hero-eyebrow b { color: var(--brand-2); font-weight: 650; }
+
+.hero-lead { max-width: 62ch; font-size: clamp(1.02rem, 1.9vw, 1.16rem); color: var(--dim); }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+/* ------------------------------ Bolumler ------------------------------ */
+
+.section { padding: clamp(52px, 8vw, 88px) 0; border-top: 1px solid var(--border); }
+.section-alt { background: var(--bg-2); }
+
+.section-head { max-width: 64ch; margin-bottom: 40px; }
+.section-head p { color: var(--dim); margin-bottom: 0; }
+
+.eyebrow {
+  display: block; margin-bottom: 10px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--brand-2);
+}
+
+/* --------------------------- Hedef kartlari --------------------------- */
+
+.goal-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.goal {
+  padding: 26px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.goal h3 { margin-bottom: .35em; }
+.goal p { color: var(--dim); font-size: .95rem; margin-bottom: 0; }
+
+.goal-ic {
+  display: grid; place-items: center;
+  width: 42px; height: 42px; margin-bottom: 16px;
+  border-radius: 11px;
+  background: rgba(79, 140, 255, .12);
+  border: 1px solid rgba(79, 140, 255, .28);
+  color: var(--brand);
+}
+.goal-ic svg { width: 21px; height: 21px; }
+
+/* ------------------------------- Plan --------------------------------- */
+
+.plan { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+
+.plan li {
+  position: relative;
+  padding: 0 0 30px 42px;
+  border-left: 2px solid var(--border-2);
+  margin-left: 15px;
+}
+.plan li:last-child { border-left-color: transparent; padding-bottom: 0; }
+
+.plan .step {
+  position: absolute; left: -16px; top: 0;
+  display: grid; place-items: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  color: var(--brand-2);
+  font-size: .82rem; font-weight: 700;
+}
+.plan h3 { margin-bottom: .3em; }
+.plan p { color: var(--dim); font-size: .95rem; margin-bottom: 0; }
+
+.plan-state {
+  display: inline-block; margin-left: 10px;
+  padding: 2px 9px; border-radius: 999px;
+  border: 1px solid var(--border-2); background: var(--surface);
+  font-size: .72rem; font-weight: 650; letter-spacing: .02em;
+  color: var(--mute); vertical-align: 2px;
+}
+.plan-state.now { color: var(--brand-2); border-color: rgba(42, 212, 196, .4); }
+
+/* ----------------------------- Uygulamalar ---------------------------- */
+
+.app-list { display: grid; gap: 20px; }
+
+.app {
+  padding: 28px 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.app-top { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 14px; }
+
+.app-icon {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; flex: none;
+  border-radius: 13px;
+  background: rgba(79, 140, 255, .12);
+  border: 1px solid rgba(79, 140, 255, .26);
+  color: var(--brand);
+}
+.app-icon svg { width: 25px; height: 25px; }
+
+.ic-prayer  { background: rgba(53, 211, 153, .12);  border-color: rgba(53, 211, 153, .28);  color: #35d399; }
+.ic-finance { background: rgba(246, 178, 60, .12);  border-color: rgba(246, 178, 60, .28);  color: #f6b23c; }
+.ic-clock   { background: rgba(124, 156, 255, .12); border-color: rgba(124, 156, 255, .28); color: #7c9cff; }
+.ic-vault   { background: rgba(42, 212, 196, .12);  border-color: rgba(42, 212, 196, .28);  color: #2ad4c4; }
+.ic-game    { background: rgba(232, 121, 249, .12); border-color: rgba(232, 121, 249, .28); color: #e879f9; }
+
+.app-name { margin: 0 0 4px; font-size: 1.22rem; font-weight: 700; }
+.app-meta { margin: 0; font-size: .82rem; color: var(--mute); }
+.app > p { color: var(--dim); margin-bottom: 0; max-width: 70ch; }
+
+.shots { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.shots img {
+  height: 220px; width: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-2);
+  background: #05080d;
+}
+.shots.wide img { height: 175px; }
+
+@media (max-width: 560px) {
+  .app { padding: 24px 20px; }
+  .shots { gap: 10px; }
+  .shots img, .shots.wide img { height: 158px; }
+}
+
+/* -------------------------------- CTA --------------------------------- */
+
+.cta {
+  padding: clamp(32px, 6vw, 52px);
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+.cta p { color: var(--dim); max-width: 58ch; margin-inline: auto; }
+.cta .hero-actions { justify-content: center; }
+
+/* ------------------------------ Belgeler ------------------------------ */
+
+.doc-header {
+  padding: clamp(40px, 7vw, 68px) 0 clamp(26px, 4vw, 38px);
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(760px 340px at 18% -20%, rgba(79, 140, 255, .13), transparent 62%);
+}
+.doc-header h1 { font-size: clamp(1.7rem, 4.4vw, 2.5rem); max-width: none; }
+.doc-header > .container > p { color: var(--dim); max-width: 68ch; margin-bottom: 0; }
+
+.breadcrumb {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  list-style: none; margin: 0 0 18px; padding: 0;
+  font-size: .85rem; color: var(--mute);
+}
+.breadcrumb li + li::before { content: "/"; margin-right: 8px; color: var(--border-2); }
+
+.doc-meta {
+  display: flex; flex-wrap: wrap; gap: 8px 22px;
+  margin-top: 22px;
+  font-size: .86rem; color: var(--mute);
+}
+.doc-meta b { color: var(--dim); font-weight: 600; }
+
+.doc { padding: clamp(40px, 6vw, 64px) 0 clamp(56px, 9vw, 88px); }
+.doc .container { max-width: 800px; }
+
+.doc h2 {
+  margin-top: 2.4em; padding-top: 1.4em;
+  border-top: 1px solid var(--border);
+  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+}
+.doc h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.doc h3 { margin-top: 1.9em; }
+.doc p, .doc li { color: var(--dim); }
+.doc strong { color: var(--text); font-weight: 650; }
+.doc ul, .doc ol { padding-left: 22px; margin: 0 0 1.1em; }
+.doc li { margin-bottom: .5em; }
+
+.callout {
+  padding: 20px 22px; margin: 1.6em 0;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-left: 3px solid var(--brand);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout.warn { border-left-color: #f6b23c; }
+
+.table-wrap { overflow-x: auto; margin: 1.5em 0; }
+table { width: 100%; border-collapse: collapse; font-size: .92rem; min-width: 520px; }
+th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--text); font-weight: 650; background: var(--surface); }
+td { color: var(--dim); }
+
+/* -------------------------------- Alt --------------------------------- */
+
+.site-footer {
+  padding: 44px 0 32px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-2);
+  font-size: .92rem;
+}
+
+.footer-top {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 18px;
+}
+.footer-nav { display: flex; flex-wrap: wrap; gap: 20px; list-style: none; margin: 0; padding: 0; }
+.footer-nav a { color: var(--dim); }
+
+.footer-bottom {
+  display: flex; flex-wrap: wrap; gap: 10px 20px; justify-content: space-between;
+  margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--mute); font-size: .86rem;
+}
+
+/* ------------------------------- 404 ---------------------------------- */
+
+.notfound { padding: clamp(80px, 16vw, 160px) 0; text-align: center; }
+.notfound .big { font-size: clamp(4rem, 16vw, 8rem); font-weight: 800; line-height: 1; margin: 0 0 12px; }
+.notfound p { color: var(--dim); max-width: 48ch; margin-inline: auto; }
+.notfound .hero-actions { justify-content: center; }

@@ -1,0 +1,17 @@
+# Isletim sistemi
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vs/
+.idea/
+*.user
+*.suo
+
+# Yerel onizleme / araclar
+node_modules/
+.cache/
+
+# Yerel onizleme yapilandirmasi
+.claude/

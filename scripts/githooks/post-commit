@@ -1,0 +1,13 @@
+#!/bin/sh
+# post-commit: her commit'ten sonra projeyi Google Drive'a arsivler.
+#
+# Etkinlestirme (bir kez, yerel git config):
+#   git config core.hooksPath scripts/githooks
+#
+# Yapilandirma yoksa drive-sync.ps1 sessizce cikar -> hook hicbir zaman commit'i bozmaz.
+# Bu yuzden cikis kodu HER ZAMAN 0'dir; yukleme hatasi commit'i geri almaz.
+
+root="$(git rev-parse --show-toplevel)"
+powershell -NoProfile -ExecutionPolicy Bypass -File "$root/scripts/drive-sync.ps1" || true
+
+exit 0
