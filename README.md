@@ -80,8 +80,11 @@ Turhost panelinde `mrhobist.com` -> **DNS Yonetimi**:
 
 > ### MX kayitlarina DOKUNMAYIN
 > Yalnizca `A` ve `www` `CNAME` kayitlarini degistirin. `MX` ve mail ile ilgili `TXT`
-> (SPF/DKIM) kayitlari Turhost'ta kalsin — aksi halde `destek@mrhobist.com` e-postasi
-> calismaz. Web sitesi GitHub'da, e-posta Turhost'ta: bu ikisi birbirinden bagimsizdir.
+> (SPF/DKIM) kayitlari Turhost'ta kalsin — aksi halde alan adina bagli e-posta calismaz.
+> Web sitesi GitHub'da, e-posta Turhost'ta: bu ikisi birbirinden bagimsizdir.
+>
+> Sitede ve gizlilik metninde iletisim adresi olarak `mrhobist@gmail.com` geciyor; bu adres
+> alan adi DNS'inden bagimsizdir, yani Pages gecisi onu etkilemez.
 
 ### 4. HTTPS
 
@@ -141,8 +144,6 @@ da istenir.
 
 ## Yayindan once yapilacaklar
 
-- [ ] **`destek@mrhobist.com` posta kutusunu Turhost panelinden acin.** Sitede ve gizlilik
-      metninde bu adres geciyor; Play Console ve OAuth dogrulamasi calisan bir adres ister.
 - [ ] Gizlilik metnindeki **"Gelistirici: MrHobist"** ifadesinin Play Console'daki
       gelistirici adiyla **birebir ayni** oldugundan emin olun.
 - [ ] Uygulamalar Play'e ciktikca `index.html` icindeki `app-meta` satirlarini guncelleyin
