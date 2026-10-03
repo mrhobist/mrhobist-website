@@ -96,9 +96,13 @@
             <tr>
               <td>Namaz Vakti</td>
               <td>Seçtiğiniz il/ilçe kimliği; kuruluma özel teknik tanımlayıcı
-                  (Firebase Installations ve App Check)</td>
+                  (Firebase Installations ve App Check); sunucuya gelen isteğin teknik kaydı
+                  (IP adresi dahil). Yalnız “konumumu bul” derseniz: yaklaşık konumunuz, il/ilçe
+                  adına çevrilmesi için cihazınızın Google konum hizmetine gider; ham koordinat
+                  MrHobist sunucusuna gönderilmez. Wear OS saatiniz varsa: vakitler, şehir adı ve
+                  kıble için enlem/boylam yalnızca eşleştirdiğiniz saate aktarılır</td>
               <td>O ilçenin vakit tablosunu getirmek; isteğin gerçekten bu uygulamadan
-                  geldiğini doğrulamak</td>
+                  geldiğini doğrulamak; ilçenizi bulmak; saatte vakit ve kıble göstermek</td>
             </tr>
             <tr>
               <td>Hesap Kitap</td>
@@ -178,9 +182,24 @@
          kullanılmaz ve kimseye aktarılmaz.</p>
 
       <p>Kişisel verilerinizi <strong>satmıyoruz</strong>, kiralamıyoruz veya veri
-         simsarlarıyla paylaşmıyoruz. Zorunlu hukuki bir talep dışında hiçbir üçüncü tarafa
-         veri aktarımı yapılmaz — böyle bir talep gelse de elimizde aktarılabilecek kişisel
-         veri bulunmamaktadır.</p>
+         simsarlarıyla paylaşmıyoruz. Yukarıdaki tabloda adı geçen altyapı hizmetleri (Google
+         Firebase, Google konum hizmeti, Open-Meteo) dışında hiçbir üçüncü tarafa veri
+         aktarılmaz; zorunlu hukuki bir talep bunun tek istisnasıdır.</p>
+
+      <h2>Bize yazdığınızda</h2>
+
+      <p>Bir uygulamadaki <strong>Bize Bildir</strong> düğmesi uygulamanın kendisinden hiçbir şey
+         göndermez; cihazınızdaki e-posta uygulamasında
+         <a href="mailto:mrhobist@gmail.com">mrhobist@gmail.com</a> adresine hazır bir taslak açar.
+         Namaz Vakti'nde taslakta uygulama sürümü, cihaz markası ve modeli ile Android sürümü yazılıdır;
+         ekte uygulamanın cihazda tuttuğu teknik olay günlüğü bulunur (alarm kurulumları, vakit
+         yenilemeleri, hatalar ve seçili ilçenin kimlik numarası — konum koordinatı içermez).
+         Göndermeden önce taslağı görebilir, düzenleyebilir veya eki silebilirsiniz.</p>
+
+      <p>Gönderirseniz e-posta adresinizi, yazdıklarınızı ve eki <strong>yalnızca size yanıt
+         vermek ve bildirdiğiniz sorunu çözmek için</strong> kullanırız; üçüncü kişilerle
+         paylaşmayız. E-posta Gmail'de, yani Google'ın sunucularında saklanır. Talebiniz
+         sonuçlandıktan sonra yazışmanın silinmesini isteyebilirsiniz.</p>
 
       <h2>Verilerinizi silmek</h2>
 
@@ -202,22 +221,51 @@
             tarayıcı sürümünde site verisini temizlemek de aynı sonucu verir.</li>
       </ul>
 
-      <p>Bizden silinmesini isteyebileceğiniz bir kayıt bulunmamaktadır, çünkü kişisel
-         verilerinizi hiçbir zaman almıyoruz. Yine de bir sorunuz olursa
-         <a href="mailto:mrhobist@gmail.com">mrhobist@gmail.com</a> adresine yazabilirsiniz.</p>
+      <p>Sunucu tarafında adınız, e-postanız veya hesabınız gibi sizi doğrudan tanımlayan bir
+         kayıt tutmuyoruz. Kuruluma özel teknik tanımlayıcılar ve istek kayıtları Google'ın
+         hizmet politikalarına göre tutulur; bize yazdığınız bir e-postanın silinmesini
+         <a href="mailto:mrhobist@gmail.com">mrhobist@gmail.com</a> adresinden isteyebilirsiniz.</p>
+
+      <h2>KVKK aydınlatma metni</h2>
+
+      <p>Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi
+         uyarınca hazırlanmıştır.</p>
+
+      <ul>
+        <li><strong>Veri sorumlusu:</strong> MrHobist (bağımsız geliştirici), Türkiye ·
+            <a href="mailto:mrhobist@gmail.com">mrhobist@gmail.com</a></li>
+        <li><strong>İşlenen veriler ve amaçları:</strong> yukarıdaki tabloda uygulama bazında
+            sayılan veriler, tablodaki amaçlarla; bize yazdığınızda e-posta adresiniz, mesajınız
+            ve eki, size yanıt vermek ve sorunu çözmek için.</li>
+        <li><strong>Toplama yöntemi:</strong> uygulamalar aracılığıyla otomatik yolla; bize
+            yazdığınızda e-posta yoluyla.</li>
+        <li><strong>Hukuki sebep:</strong> talep ettiğiniz hizmetin sunulması (KVKK md. 5/2-c)
+            ve hizmetin kötüye kullanıma karşı korunması ile size yanıt verilmesindeki meşru
+            menfaatimiz (KVKK md. 5/2-f).</li>
+        <li><strong>Aktarım:</strong> veriler, hizmeti çalıştıran altyapı sağlayıcılarına
+            aktarılır: Google (Firebase sunucusu ve veritabanı Almanya'daki Frankfurt bölgesinde;
+            App Check, Installations, konum hizmeti ve Gmail Google'ın küresel altyapısında) ve
+            WidgetCanvas'ta Open-Meteo. Bu aktarımlar <strong>yurt dışına aktarım</strong>
+            niteliğindedir ve yalnızca yukarıdaki amaçlarla yapılır.</li>
+      </ul>
 
       <h2>Haklarınız</h2>
 
-      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri
-         Koruma Tüzüğü (GDPR) kapsamında; verilerinize erişme, düzeltme, silme, işlemeyi
-         kısıtlama, taşınabilirlik ve itiraz haklarına sahipsiniz.</p>
+      <p>KVKK'nın 11. maddesi uyarınca; kişisel verinizin işlenip işlenmediğini öğrenme,
+         işlenmişse bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını
+         öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya
+         yanlış işlenmişse düzeltilmesini, silinmesini veya yok edilmesini ve bu işlemlerin
+         aktarıldığı üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle
+         analiz edilmesi sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna
+         aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme
+         haklarına sahipsiniz. Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamındaki
+         haklarınız da saklıdır.</p>
 
-      <p>Uygulamalarımızda bu hakların çoğu doğrudan sizin elinizdedir: veriler cihazınızda
-         durduğu için erişim, düzeltme ve silme işlemlerini uygulama içinden yapabilirsiniz.
-         Elimizde kimliğinizle ilişkilendirilmiş bir kayıt bulunmadığından, bize
-         yöneltilebilecek bir erişim veya silme talebi de doğmaz. Yine de her türlü soru ve
-         talebiniz için <a href="mailto:mrhobist@gmail.com">mrhobist@gmail.com</a> adresine
-         yazabilirsiniz; makul süre içinde yanıt verilir.</p>
+      <p>Uygulamalarımızda bu hakların çoğu doğrudan sizin elinizdedir: veriler büyük ölçüde
+         cihazınızda durduğu için erişim, düzeltme ve silme işlemlerini uygulama içinden
+         yapabilirsiniz. Diğer taleplerinizi <a href="mailto:mrhobist@gmail.com">mrhobist@gmail.com</a>
+         adresine iletebilirsiniz; talebiniz en geç 30 gün içinde ücretsiz olarak
+         sonuçlandırılır.</p>
 
       <h2>Değişiklikler</h2>
 
