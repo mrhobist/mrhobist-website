@@ -56,7 +56,7 @@
          kişisel verileri nasıl işlediğini açıklar.</p>
       <div class="doc-meta">
         <span><b>Geliştirici:</b> MrHobist</span>
-        <span><b>Son güncelleme:</b> 27 Ekim 2026</span>
+        <span><b>Son güncelleme:</b> 29 Ekim 2026</span>
         <span><b>İletişim:</b> mrhobist@gmail.com</span>
       </div>
     </div>
@@ -105,10 +105,17 @@
                   geldiğini doğrulamak; ilçenizi bulmak; saatte vakit ve kıble göstermek</td>
             </tr>
             <tr>
-              <td>Hesap Kitap</td>
-              <td>Kişisel veri çıkmaz. Yalnızca “bugünün kurları nedir?” niteliğinde
-                  fiyat isteği yapılır</td>
-              <td>Güncel döviz kuru ve değerli maden fiyatı</td>
+              <td>Hesap Kitap (Android ve Windows)</td>
+              <td>Varsayılanda kişisel veri çıkmaz; yalnızca “bugünün kurları nedir?” niteliğinde
+                  fiyat isteği yapılır ve bu isteklerde kişisel veri gönderilmez. Google Drive
+                  yedeğini bağlarsanız yedek dosyası <strong>kendi</strong> Google Drive'ınızdaki
+                  uygulamaya özel gizli klasöre yazılır (Hesap Kitap Drive'ınızdaki diğer dosyaları
+                  görmez); MrHobist'e hiçbir veri gelmez. Windows'ta veriler bilgisayarınızda,
+                  uygulamanın Windows tarafından ayrılmış klasöründe saklanır; Drive erişim belirteci
+                  Windows'un kullanıcıya özel şifrelemesiyle (DPAPI) korunur ve
+                  <strong>Ayarlar → Bağlantıyı kes</strong> ile Google'da da iptal edilir</td>
+              <td>Güncel döviz kuru ve değerli maden fiyatı; telefon ve bilgisayar arasında
+                  kendi Drive'ınız üzerinden yedek ve eşitleme</td>
             </tr>
             <tr>
               <td>Masa Saati</td>
@@ -169,9 +176,9 @@
          <strong>istemez, okumaz ve iletmez</strong>:</p>
 
       <ul>
-        <li>Ad, soyad, e-posta adresi, telefon numarası, adres, doğum tarihi (Notrivo'da Drive
-            yedeğini bağladığınızda, bağlı hesabı göstermek için Google hesabınızın e-posta
-            adresi yalnızca cihazda okunur ve hiçbir yere gönderilmez)</li>
+        <li>Ad, soyad, e-posta adresi, telefon numarası, adres, doğum tarihi (Notrivo'da ve Hesap
+            Kitap'ta Drive yedeğini bağladığınızda, bağlı hesabı göstermek için Google hesabınızın
+            e-posta adresi yalnızca cihazda okunur ve hiçbir yere gönderilmez)</li>
         <li>Kullanıcı hesabı, kullanıcı adı veya şifre — uygulamaların hesap sistemi yoktur</li>
         <li>Rehber, çağrı kaydı, SMS, bildirimler, fotoğraflar, mikrofon veya kamera
             (Notrivo'da yalnızca sizin seçtiğiniz ya da çektiğiniz fotoğraf sayfaya eklenir ve
@@ -182,7 +189,7 @@
         <li>Banka hesapları, kart bilgileri, ödeme geçmişi</li>
       </ul>
 
-      <p>Notrivo'nun Google API'lerinden aldığı bilgilerin kullanımı ve başka herhangi bir
+      <p>Notrivo'nun ve Hesap Kitap'ın Google API'lerinden aldığı bilgilerin kullanımı ve başka herhangi bir
          uygulamaya aktarımı, Sınırlı Kullanım (Limited Use) şartları dahil
          <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google
          API Hizmetleri Kullanıcı Verileri Politikası</a>'na uygundur. Bu bilgiler yalnızca
@@ -225,6 +232,9 @@
             <strong>Ayarlar → Uygulamaları yönet → Notrivo → Seçenekler → Gizli uygulama
             verilerini sil</strong>; uygulama içinden <strong>Bağlantıyı kes</strong> ise
             Notrivo'nun Drive erişimini kaldırır.</li>
+        <li><strong>Hesap Kitap (Windows)</strong> uygulamasını Windows Ayarlar → Uygulamalar
+            bölümünden kaldırmak bilgisayardaki verisini siler; Drive yedeği yukarıdaki gibi
+            Google hesabınızdan kaldırılır.</li>
         <li><strong>Kanat Atölyesi'nde</strong> oyun içindeki “kaydı sıfırla” ilerlemeyi siler;
             tarayıcı sürümünde site verisini temizlemek de aynı sonucu verir.</li>
       </ul>
