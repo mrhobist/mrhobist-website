@@ -15,3 +15,7 @@ node_modules/
 
 # Yerel onizleme yapilandirmasi
 .claude/
+
+# Yerel ajan notlari (Jekyll kapali: depodaki her dosya sitede yayinlanir)
+CLAUDE.md
+CLAUDE.local.md
