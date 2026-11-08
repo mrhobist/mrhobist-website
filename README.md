@@ -23,9 +23,7 @@ MrHobist.Website/
 ├── sitemap.xml
 ├── .nojekyll               Jekyll islemesini kapatir
 └── scripts/
-    ├── drive-sync.ps1      Google Drive arsivi (rclone)
-    ├── gitpush.ps1         Sandbox'ta calisan push yardimcisi
-    └── githooks/post-commit
+    └── gitpush.ps1         Sandbox'ta calisan push yardimcisi
 ```
 
 Site iki sayfadan olusur. Uygulama basina ayri gizlilik sayfasi **yoktur**; tum
@@ -115,34 +113,6 @@ git add -A && git commit -m "mesaj" && git push
 ```
 
 Pages birkac saniye icinde yeni surumu yayinlar.
-
----
-
-## Google Drive yedegi
-
-Her commit'ten sonra projenin kaynak arsivi Drive'a yuklenir:
-`MrHobist/Website/Proje/Website-<tarih>-<sha>.zip`
-
-Diger MrHobist projelerindeki (Deskify, PrayerTimes) duzenin aynisi: `rclone` + bir
-`post-commit` hook'u. Yapilandirma yoksa script sessizce cikar ve commit'i asla bozmaz.
-
-Kurulum (bir kez):
-
-```bash
-git config core.hooksPath scripts/githooks
-```
-
-Ortam degiskeni (bu makinede zaten `gdrive` remote'u tanimli):
-
-```bash
-powershell -c "[Environment]::SetEnvironmentVariable('WEBSITE_DRIVE_REMOTE','gdrive','User')"
-```
-
-Elle tetiklemek icin:
-
-```bash
-powershell -ExecutionPolicy Bypass -File scripts/drive-sync.ps1
-```
 
 ---
 

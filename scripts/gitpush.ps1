@@ -60,15 +60,4 @@ if (-not $exitLine) {
 
 $gitExit = [int]$Matches[1]
 
-# Push BASARILIYSA Drive arsivini de tazele. Boylece uzak depo ile Drive arsivi ayni noktada
-# olur; post-commit hook'u kacirilmis olsa bile push telafi eder. Zip adi tarih+sha oldugundan
-# ayni commit icin tekrar calismak Drive'da KOPYA URETMEZ.
-# drive-sync yapilandirilmamissa sessizce cikar; push'un sonucunu ASLA degistirmez.
-if ($gitExit -eq 0) {
-    $sync = Join-Path $PSScriptRoot "drive-sync.ps1"
-    if (Test-Path $sync) {
-        try { & powershell -NoProfile -ExecutionPolicy Bypass -File $sync } catch { Write-Output "[gitpush] drive-sync atlandi: $_" }
-    }
-}
-
 exit $gitExit
