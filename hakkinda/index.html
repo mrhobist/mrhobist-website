@@ -6,6 +6,8 @@
 <title>Hakkında ve Gizlilik Politikası | MrHobist</title>
 <meta name="description" content="MrHobist hakkında bilgi ve tüm uygulamaları kapsayan gizlilik politikası: hangi veriler işlenir, hangileri hiç toplanmaz, nasıl silinir.">
 <link rel="canonical" href="https://mrhobist.com/hakkinda/">
+<link rel="alternate" hreflang="tr" href="https://mrhobist.com/hakkinda/">
+<link rel="alternate" hreflang="en" href="https://mrhobist.com/en/privacy/">
 <meta name="theme-color" content="#0a0d12">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/icon-512.png">
@@ -56,8 +58,9 @@
          kişisel verileri nasıl işlediğini açıklar.</p>
       <div class="doc-meta">
         <span><b>Geliştirici:</b> MrHobist</span>
-        <span><b>Son güncelleme:</b> 29 Ekim 2026</span>
+        <span><b>Son güncelleme:</b> 11 Kasım 2026</span>
         <span><b>İletişim:</b> mrhobist@gmail.com</span>
+        <span lang="en"><b>English:</b> <a href="/en/privacy/" hreflang="en">Desk Clock privacy policy</a></span>
       </div>
     </div>
   </div>
@@ -119,10 +122,21 @@
             </tr>
             <tr>
               <td>Masa Saati</td>
-              <td>Varsayılanda hiçbir şey. Yalnız ilgili öğeyi açarsanız: seçtiğiniz şehrin
-                  koordinatı (hava durumu), il/ilçe kimliği (namaz vakti) ve kuruluma özel
-                  teknik tanımlayıcı</td>
-              <td>Hava durumu ve namaz vakti göstergelerini beslemek</td>
+              <td>Konum izni istenmez; yerler listeden elle seçilir. Uygulama açıkken hazır
+                  tasarım kataloğu Google Firebase'den indirilir; bu istekle kuruluma özel teknik
+                  tanımlayıcı (Firebase Installations ve App Check) ve sunucuya gelen isteğin
+                  teknik kaydı (IP adresi dahil) oluşur. Yalnız ilgili öğeyi açarsanız: seçtiğiniz
+                  yerin koordinatı doğrudan MET Norway'e (api.met.no) gider (hava durumu; her
+                  internet isteği gibi cihazınızın IP adresini taşır); il/ilçe veya şehir kimliği
+                  (namaz vakti, yalnız Türkiye ve Almanya). Google Drive yedeğini bağlarsanız ayar
+                  yedeği, siz başlattığınızda veya seçtiğiniz otomatik sıklıkta, <strong>kendi</strong>
+                  Google Drive'ınızdaki uygulamaya özel gizli klasöre yazılır (Masa Saati
+                  Drive'ınızdaki diğer dosyaları görmez); MrHobist'e hiçbir veri gelmez. Tek seferlik
+                  Pro satın alımı tamamen Google Play Faturalandırma ile yapılır; ödeme bilgileriniz
+                  MrHobist'e gelmez. Android sistem yedeği ve cihazdan cihaza aktarım kapalıdır</td>
+              <td>Hazır tasarımları getirmek; isteğin gerçekten bu uygulamadan geldiğini
+                  doğrulamak; hava durumu ve namaz vakti göstergelerini beslemek; ayarlarınızı
+                  yedeklemek ve geri yüklemek; Pro özelliklerini açmak</td>
             </tr>
             <tr>
               <td>Şifre Yönetimi</td>
@@ -189,7 +203,7 @@
         <li>Banka hesapları, kart bilgileri, ödeme geçmişi</li>
       </ul>
 
-      <p>Notrivo'nun ve Hesap Kitap'ın Google API'lerinden aldığı bilgilerin kullanımı ve başka herhangi bir
+      <p>Notrivo'nun, Hesap Kitap'ın ve Masa Saati'nin Google API'lerinden aldığı bilgilerin kullanımı ve başka herhangi bir
          uygulamaya aktarımı, Sınırlı Kullanım (Limited Use) şartları dahil
          <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google
          API Hizmetleri Kullanıcı Verileri Politikası</a>'na uygundur. Bu bilgiler yalnızca
@@ -198,7 +212,7 @@
 
       <p>Kişisel verilerinizi <strong>satmıyoruz</strong>, kiralamıyoruz veya veri
          simsarlarıyla paylaşmıyoruz. Yukarıdaki tabloda adı geçen altyapı hizmetleri (Google
-         Firebase, Google konum hizmeti, Open-Meteo) dışında hiçbir üçüncü tarafa veri
+         Firebase, Google konum hizmeti, Google Play, Open-Meteo, MET Norway) dışında hiçbir üçüncü tarafa veri
          aktarılmaz; zorunlu hukuki bir talep bunun tek istisnasıdır.</p>
 
       <h2>Bize yazdığınızda</h2>
@@ -263,7 +277,7 @@
         <li><strong>Aktarım:</strong> veriler, hizmeti çalıştıran altyapı sağlayıcılarına
             aktarılır: Google (Firebase sunucusu ve veritabanı Almanya'daki Frankfurt bölgesinde;
             App Check, Installations, konum hizmeti ve Gmail Google'ın küresel altyapısında) ve
-            WidgetCanvas'ta Open-Meteo. Bu aktarımlar <strong>yurt dışına aktarım</strong>
+            WidgetCanvas'ta Open-Meteo, Masa Saati'nde MET Norway (Norveç). Bu aktarımlar <strong>yurt dışına aktarım</strong>
             niteliğindedir ve yalnızca yukarıdaki amaçlarla yapılır.</li>
       </ul>
 
@@ -299,7 +313,8 @@
         <li><strong>Hukuki dayanaklar (md. 6/1):</strong>
           <ul>
             <li>Seçtiğiniz il/ilçe veya şehir kimliği ve vakitlerin getirilmesi için gereken
-                teknik istek: talep ettiğiniz hizmetin sunulması (md. 6/1-b).</li>
+                teknik istek; Masa Saati'nde hava durumu için seçtiğiniz yerin koordinatı:
+                talep ettiğiniz hizmetin sunulması (md. 6/1-b).</li>
             <li>Kuruluma özel teknik tanımlayıcı (Firebase App Check ve Installations) ve
                 sunucuya gelen isteğin teknik kaydı (IP adresi dahil): hizmetin kötüye kullanıma
                 karşı korunması ve güvenliğindeki meşru menfaatimiz (md. 6/1-f).</li>
@@ -312,7 +327,8 @@
           </ul>
         </li>
         <li><strong>Alıcılar:</strong> Google (Firebase sunucusu, veritabanı, App Check ve
-            Installations; Android konum hizmeti; Gmail) ve WidgetCanvas'ta Open-Meteo. Google,
+            Installations; Android konum hizmeti; Gmail), WidgetCanvas'ta Open-Meteo ve Masa
+            Saati'nde MET Norway. Google,
             Firebase verisini bizim adımıza, Google'ın veri işleme şartları kapsamında işler.
             Verileriniz satılmaz ve reklam amacıyla kimseyle paylaşılmaz.</li>
         <li><strong>AB dışına aktarım:</strong> Namaz Vakti ve Masa Saati'nin sunucusu ve
