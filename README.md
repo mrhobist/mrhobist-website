@@ -13,6 +13,7 @@ OAuth dogrulamasi gizlilik URL'sini JS calistirmadan okur.
 MrHobist.Website/
 ├── index.html              Ana sayfa: Hedef · Plan · Gelecek (uygulamalar)
 ├── hakkinda/index.html     Hakkinda + Gizlilik Politikasi  ← Play Console'a verilecek URL
+├── en/privacy/index.html   Ingilizce gizlilik politikasi (Masa Saati / Desk Clock)
 ├── 404.html                Bulunamadi sayfasi (GitHub Pages otomatik kullanir)
 ├── assets/
 │   ├── css/site.css        Tek stylesheet
